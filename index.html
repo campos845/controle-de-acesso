@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Controle de Acesso</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <h1>Controle de Acesso</h1>
+  
+  <form id="cadastroForm" enctype="multipart/form-data">
+    <label for="nomeInput">Nome:</label>
+    <input type="text" id="nomeInput">
+    <label for="localEmpresaInput"> Empresa:</label>
+    <input type="text" id="localEmpresaInput" required>
+    <label for="celularInput">Celular:</label>
+    <input type="text" id="celularInput" required>
+    <label for="emailInput">Email:</label>
+    <input type="email" id="emailInput" required>
+    <label for="cpfInput">CPF:</label>
+    <input type="text" id="cpfInput" required>
+    <label for="andarInput">Andar:</label>
+    <input type="text" id="andarInput" required>
+    <label for="empresaVisitadaInput">Empresa a ser Visitada:</label>
+    <input type="text" id="empresaVisitadaInput" required>
+    <label for="autorizadorInput">Autorizado por:</label>
+    <input type="text" id="autorizadorInput" required>
+    <label for="fotoInput">Foto:</label>
+    <input type="file" id="fotoInput" accept="image/*" required>
+    <button type="submit" id="submitBotao" onclick="validaCadastro(event)">Cadastrar</button>
+  </form>
+
+  <div id="qrCode"></div>
+  <button id="checkAccessButton" onclick="verificarAcesso()" disabled>Verificar Acesso</button>
+
+  <div id="cadastroInfo">
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
